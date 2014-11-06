@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/MatchMatch"
-    android:background="#00f">
+    android:background="#ff99cc00">
+
+    <TextView
+        style="@style/MatchWrap"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/size_small"
+        android:text="卸载步骤：设置-安全-设备管理器-去掉激活,再卸载就可以了,谢谢!"
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/btn_last_main"
         style="@style/WrapWrap"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/size_large_large"
         android:text="进入主界面"
+        android:background="#33999999"
         android:textColor="@android:color/white"
-        android:textSize="20sp" />
+        android:textSize="@dimen/textSize_middle" />
 
 </RelativeLayout>

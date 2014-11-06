@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
+import cn.bingoogolapple.powerassistant.App;
+
 public class SpUtil {
 	private static SharedPreferences mSharedPreferences;
 
@@ -80,5 +82,14 @@ public class SpUtil {
     public static boolean getShowAd() {
         return getBoolean("show_ad", true);
     }
+
+    public static void setFirstUse(boolean value) {
+        putBoolean(App.getInstance().getCurrentVersionName(), value);
+    }
+
+    public static boolean getFirstUse() {
+        return getBoolean(App.getInstance().getCurrentVersionName(), true);
+    }
+
 
 }

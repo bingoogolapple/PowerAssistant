@@ -61,4 +61,17 @@ public class App extends Application {
         }
     }
 
+    /**
+     * 获取当前版本名称
+     *
+     * @return
+     */
+    public String getCurrentVersionName() {
+        try {
+            return getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+        } catch (Exception e) {
+            // 利用系统api getPackageName()得到的包名，这个异常根本不可能发生
+            return null;
+        }
+    }
 }

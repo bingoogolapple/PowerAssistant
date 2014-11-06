@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/MatchMatch"
-    android:background="#f00" >
+    android:background="#ff33b5e5" >
 
     <TextView
-        style="@style/WrapWrap"
+        style="@style/MatchWrap"
         android:layout_centerInParent="true"
-        android:text="One"
+        android:padding="@dimen/size_small"
+        android:text="“电源键助手”应用需要激活设备管理器(任何一键锁屏软件都需要该操作)"
         android:textColor="@android:color/white"
         android:textSize="30sp" />
 

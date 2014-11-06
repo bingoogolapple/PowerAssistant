@@ -13,6 +13,7 @@ import cn.bingoogolapple.bgabanner.library.BGABanner;
 import cn.bingoogolapple.loon.library.LoonLayout;
 import cn.bingoogolapple.loon.library.LoonView;
 import cn.bingoogolapple.powerassistant.R;
+import cn.bingoogolapple.powerassistant.util.SpUtil;
 
 @LoonLayout(id = R.layout.activity_splash)
 public class SplashActivity extends BaseActivity {
@@ -33,10 +34,20 @@ public class SplashActivity extends BaseActivity {
         lastView.findViewById(R.id.btn_last_main).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
-                finish();
+                loadMainActivity();
             }
         });
+
+        if(SpUtil.getFirstUse()) {
+            SpUtil.setFirstUse(false);
+        } else {
+            loadMainActivity();
+        }
+    }
+
+    private void loadMainActivity() {
+        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+        finish();
     }
 
     @Override
