@@ -1,3 +1,11 @@
 <resources>
-
+    <style name="item_container" parent="@style/MatchWrap.Horizontal">
+        <item name="android:padding">@dimen/size_small</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="toggle_button" parent="@style/WrapWrap">
+        <item name="android:textSize">@dimen/textSize_small</item>
+        <item name="android:textOff">@string/closed</item>
+        <item name="android:textOn">@string/opened</item>
+    </style>
 </resources>

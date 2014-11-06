@@ -98,7 +98,7 @@ public class MainActivity extends BaseActivity {
     private void activeDeviceAdmin() {
         Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
         intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, mComponentName);
-        intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, "必须激活屏幕专家为设备管理器之后才能实现一键锁屏功能");
+        intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, getString(R.string.active_tips));
         startActivity(intent);
     }
 

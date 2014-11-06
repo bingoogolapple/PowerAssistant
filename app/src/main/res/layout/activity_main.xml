@@ -6,21 +6,34 @@
         style="@style/MatchWrap"
         android:gravity="center"
         android:background="#500f"
-        android:textSize="15sp"
-        android:padding="5dp"
+        android:textSize="@dimen/textSize_large"
+        android:padding="@dimen/size_small"
         android:text="@string/app_name" />
 
-    <ToggleButton
-        android:id="@+id/tb_main_shake"
-        style="@style/MatchWrap"
-        android:layout_marginTop="10dp"
-        android:textOff="已关闭摇一摇解锁屏幕"
-        android:textOn="已开启摇一摇解锁屏幕" />
+    <LinearLayout style="@style/item_container">
 
-    <ToggleButton
-        android:id="@+id/tb_main_onekey"
-        style="@style/MatchWrap"
-        android:layout_marginTop="10dp"
-        android:textOff="已关闭一键锁屏"
-        android:textOn="已开启一键锁屏" />
+        <TextView
+            style="@style/AutoWrap"
+            android:textSize="@dimen/textSize_middle"
+            android:text="@string/shake_light_up_screen" />
+
+        <ToggleButton
+            android:id="@+id/tb_main_shake"
+            style="@style/toggle_button" />
+
+    </LinearLayout>
+
+
+    <LinearLayout style="@style/item_container">
+
+        <TextView
+            style="@style/AutoWrap"
+            android:textSize="@dimen/textSize_middle"
+            android:text="@string/onekey_lock_screen" />
+
+        <ToggleButton
+            android:id="@+id/tb_main_onekey"
+            style="@style/toggle_button" />
+
+    </LinearLayout>
 </LinearLayout>

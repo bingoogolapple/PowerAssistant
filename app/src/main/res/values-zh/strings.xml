@@ -2,7 +2,11 @@
 <resources>
 
     <string name="app_name">电源键助手</string>
-    <string name="hello_world">你好，世界!</string>
-    <string name="action_settings">设置</string>
     <string name="exit_tips">再按一次退出应用程序</string>
+    <string name="shake_light_up_screen">摇一摇点亮屏幕</string>
+    <string name="onekey_lock_screen">一键锁屏</string>
+    <string name="lock_screen">锁屏</string>
+    <string name="opened">已开启</string>
+    <string name="closed">已关闭</string>
+    <string name="active_tips">必须激活电源键助手为设备管理器之后才能实现一键锁屏功能</string>
 </resources>
