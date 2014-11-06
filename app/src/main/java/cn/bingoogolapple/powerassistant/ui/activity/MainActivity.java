@@ -8,7 +8,10 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.widget.CompoundButton;
+import android.widget.LinearLayout;
 import android.widget.ToggleButton;
+
+import com.mobisage.android.MobiSageAdBanner;
 
 import cn.bingoogolapple.loon.library.LoonLayout;
 import cn.bingoogolapple.loon.library.LoonView;
@@ -26,6 +29,10 @@ public class MainActivity extends BaseActivity {
     private ToggleButton mOnekeyTb;
     @LoonView(id = R.id.tb_main_shake)
     private ToggleButton mShakeTb;
+    @LoonView(id = R.id.tb_main_showad)
+    private ToggleButton mShowAdTb;
+    @LoonView(id = R.id.ad_container)
+    private LinearLayout mAdContainer;
 
     private DevicePolicyManager mDevicePolicyManager;
     private ComponentName mComponentName;
@@ -72,6 +79,16 @@ public class MainActivity extends BaseActivity {
                 }
             }
         });
+        mShowAdTb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    showAd();
+                } else {
+                    hiddenAd();
+                }
+            }
+        });
     }
 
     @Override
@@ -80,6 +97,7 @@ public class MainActivity extends BaseActivity {
         bindService(new Intent(this, PowerAssistantCoreService.class), mScreenServiceConn, BIND_AUTO_CREATE);
         mDevicePolicyManager = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
         mComponentName = new ComponentName(this, DeviceKeeperReceiver.class);
+
     }
 
     @Override
@@ -87,12 +105,24 @@ public class MainActivity extends BaseActivity {
         super.onStart();
         mOnekeyTb.setChecked(SpUtil.getOnekeyLockScreen());
         mShakeTb.setChecked(SpUtil.getShakeUnlockScreen());
+        mShowAdTb.setChecked(SpUtil.getShowAd());
     }
 
     @Override
     protected void onDestroy() {
         unbindService(mScreenServiceConn);
         super.onDestroy();
+    }
+
+    private void showAd() {
+        SpUtil.setShowAd(true);
+        MobiSageAdBanner adv = new MobiSageAdBanner(this, "5eTlNopyaP/Vd8y/YnY+2GnD");
+        mAdContainer.addView(adv.getAdView());
+    }
+
+    private void hiddenAd() {
+        SpUtil.setShowAd(false);
+        mAdContainer.removeAllViews();
     }
 
     private void activeDeviceAdmin() {

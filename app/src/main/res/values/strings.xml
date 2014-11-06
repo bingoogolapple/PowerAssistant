@@ -9,5 +9,6 @@
     <string name="opened">Opened</string>
     <string name="closed">Closed</string>
     <string name="active_tips">Active Assistant Of Power Button To Device Admin</string>
+    <string name="showad_tips">Show AD?</string>
 
 </resources>

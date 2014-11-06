@@ -11,6 +11,10 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -39,6 +43,10 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
+        <activity
+            android:name="com.mobisage.android.MobiSageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"></activity>
+
         <service
             android:name="com.umeng.update.net.DownloadingService"
             android:process=":DownloadingService" />
@@ -48,7 +56,7 @@
         <receiver
             android:name="cn.bingoogolapple.powerassistant.receiver.DeviceKeeperReceiver"
             android:icon="@drawable/ic_launcher"
-            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
             <meta-data
                 android:name="android.app.device_admin"
                 android:resource="@xml/power_assistant" />
@@ -57,8 +65,8 @@
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
             </intent-filter>
         </receiver>
-        <receiver android:name="cn.bingoogolapple.powerassistant.receiver.BootCompleteReceiver" >
-            <intent-filter android:priority="1000" >
+        <receiver android:name="cn.bingoogolapple.powerassistant.receiver.BootCompleteReceiver">
+            <intent-filter android:priority="1000">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>

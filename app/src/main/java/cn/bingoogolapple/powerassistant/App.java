@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.Application;
 
+import com.mobisage.android.MobiSageManager;
+
 import java.util.LinkedList;
 
 import cn.bingoogolapple.powerassistant.util.SpUtil;
@@ -25,6 +27,7 @@ public class App extends Application {
         sInstance = this;
         mActivityManager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
         SpUtil.init(this);
+        MobiSageManager.getInstance().initMobiSageManager (this,"FBUUx3uAmQ4khj1Okw==");
     }
 
     public static App getInstance() {

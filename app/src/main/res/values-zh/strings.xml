@@ -9,4 +9,5 @@
     <string name="opened">已开启</string>
     <string name="closed">已关闭</string>
     <string name="active_tips">必须激活电源键助手为设备管理器之后才能实现一键锁屏功能</string>
+    <string name="showad_tips">是否显示广告?</string>
 </resources>

@@ -73,4 +73,12 @@ public class SpUtil {
         return getBoolean("onekey_lock_screen", false);
     }
 
+    public static void setShowAd(boolean value) {
+        putBoolean("show_ad", value);
+    }
+
+    public static boolean getShowAd() {
+        return getBoolean("show_ad", true);
+    }
+
 }

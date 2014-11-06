@@ -1,39 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/MatchMatch.Vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch">
 
-    <TextView
-        style="@style/MatchWrap"
-        android:gravity="center"
-        android:background="#500f"
-        android:textSize="@dimen/textSize_large"
-        android:padding="@dimen/size_small"
-        android:text="@string/app_name" />
-
-    <LinearLayout style="@style/item_container">
+    <LinearLayout style="@style/MatchWrap.Vertical">
 
         <TextView
-            style="@style/AutoWrap"
-            android:textSize="@dimen/textSize_middle"
-            android:text="@string/shake_light_up_screen" />
+            style="@style/MatchWrap"
+            android:gravity="center"
+            android:background="#500f"
+            android:textSize="@dimen/textSize_large"
+            android:padding="@dimen/size_small"
+            android:text="@string/app_name" />
 
-        <ToggleButton
-            android:id="@+id/tb_main_shake"
-            style="@style/toggle_button" />
+        <LinearLayout style="@style/item_container">
+
+            <TextView
+                style="@style/AutoWrap"
+                android:textSize="@dimen/textSize_middle"
+                android:text="@string/shake_light_up_screen" />
+
+            <ToggleButton
+                android:id="@+id/tb_main_shake"
+                style="@style/toggle_button" />
+
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/item_container">
+
+            <TextView
+                style="@style/AutoWrap"
+                android:textSize="@dimen/textSize_middle"
+                android:text="@string/onekey_lock_screen" />
+
+            <ToggleButton
+                android:id="@+id/tb_main_onekey"
+                style="@style/toggle_button" />
+
+        </LinearLayout>
+        <LinearLayout style="@style/item_container">
+
+            <TextView
+                style="@style/AutoWrap"
+                android:textSize="@dimen/textSize_middle"
+                android:text="@string/showad_tips" />
+
+            <ToggleButton
+                android:id="@+id/tb_main_showad"
+                style="@style/toggle_button" />
+
+        </LinearLayout>
 
     </LinearLayout>
-
-
-    <LinearLayout style="@style/item_container">
-
-        <TextView
-            style="@style/AutoWrap"
-            android:textSize="@dimen/textSize_middle"
-            android:text="@string/onekey_lock_screen" />
-
-        <ToggleButton
-            android:id="@+id/tb_main_onekey"
-            style="@style/toggle_button" />
-
-    </LinearLayout>
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/ad_container"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        style="@style/MatchWrap" />
+</RelativeLayout>
