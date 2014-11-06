@@ -9,8 +9,8 @@ import android.widget.Toast;
 import cn.bingoogolapple.powerassistant.util.ToastUtil;
 
 public class DeviceKeeperReceiver extends DeviceAdminReceiver {
-    public static final String ADD_DEVICE_ADMIN = "cn.bingoogol.screenexpert.ADD_DEVICE_ADMIN";
-    public static final String REMOVE_DEVICE_ADMIN = "cn.bingoogol.screenexpert.REMOVE_DEVICE_ADMIN";
+    public static final String ADD_DEVICE_ADMIN = "cn.bingoogolapple.powerassistant.ADD_DEVICE_ADMIN";
+    public static final String REMOVE_DEVICE_ADMIN = "cn.bingoogolapple.powerassistant.REMOVE_DEVICE_ADMIN";
 
     @Override
     public void onEnabled(Context context, Intent intent) {

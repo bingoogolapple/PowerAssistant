@@ -34,6 +34,8 @@ public class MainActivity extends BaseActivity {
     @LoonView(id = R.id.ad_container)
     private LinearLayout mAdContainer;
 
+    private MobiSageAdBanner mAdView;
+
     private DevicePolicyManager mDevicePolicyManager;
     private ComponentName mComponentName;
     private PowerAssistantCoreService.ScreenAction mScreenAction;
@@ -116,13 +118,18 @@ public class MainActivity extends BaseActivity {
 
     private void showAd() {
         SpUtil.setShowAd(true);
-        MobiSageAdBanner adv = new MobiSageAdBanner(this, "5eTlNopyaP/Vd8y/YnY+2GnD");
-        mAdContainer.addView(adv.getAdView());
+        if (mAdView == null) {
+            mAdView = new MobiSageAdBanner(this, "TE1MnyPbwVZ83mUWy9+XccBq");
+        }
+        mAdContainer.addView(mAdView.getAdView());
     }
 
     private void hiddenAd() {
+        if (mAdView != null) {
+            mAdView.destroyAdView();
+            mAdView = null;
+        }
         SpUtil.setShowAd(false);
-        mAdContainer.removeAllViews();
     }
 
     private void activeDeviceAdmin() {

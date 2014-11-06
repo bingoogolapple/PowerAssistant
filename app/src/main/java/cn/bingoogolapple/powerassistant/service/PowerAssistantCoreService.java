@@ -78,7 +78,7 @@ public class PowerAssistantCoreService extends Service {
             float z = values[2];
             int medumValue = 17;
             if (Math.abs(x) > medumValue || Math.abs(y) > medumValue || Math.abs(z) > medumValue) {
-                if (System.currentTimeMillis() - mLastShakeTime < 2000) {
+                if (System.currentTimeMillis() - mLastShakeTime < 1500) {
                     Logger.d(TAG, "点亮屏幕");
                     mWakeLock.acquire();
                     mWakeLock.release();
