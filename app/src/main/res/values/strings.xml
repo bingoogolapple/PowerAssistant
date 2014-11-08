@@ -6,8 +6,6 @@
     <string name="shake_light_up_screen">Shake light up the screen</string>
     <string name="onekey_lock_screen">One Key Lock Screen</string>
     <string name="lock_screen">LockScreen</string>
-    <string name="opened">Opened</string>
-    <string name="closed">Closed</string>
     <string name="active_tips">Active Assistant Of Power Button To Device Admin</string>
     <string name="showad_tips">Show AD?</string>
 
