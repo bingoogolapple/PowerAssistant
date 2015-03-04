@@ -1,4 +1,14 @@
 <resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <style name="Theme.Splash" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
     <style name="item_container" parent="@style/MatchWrap.Horizontal">
         <item name="android:padding">@dimen/size_small</item>
         <item name="android:gravity">center_vertical</item>

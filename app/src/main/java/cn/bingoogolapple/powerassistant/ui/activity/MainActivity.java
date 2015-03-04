@@ -13,8 +13,8 @@ import android.widget.ToggleButton;
 
 import com.mobisage.android.MobiSageAdBanner;
 
-import cn.bingoogolapple.loon.library.LoonLayout;
-import cn.bingoogolapple.loon.library.LoonView;
+import cn.bingoogolapple.bgaannotation.BGAALayout;
+import cn.bingoogolapple.bgaannotation.BGAAView;
 import cn.bingoogolapple.powerassistant.R;
 import cn.bingoogolapple.powerassistant.receiver.DeviceKeeperReceiver;
 import cn.bingoogolapple.powerassistant.service.PowerAssistantCoreService;
@@ -22,16 +22,16 @@ import cn.bingoogolapple.powerassistant.util.Logger;
 import cn.bingoogolapple.powerassistant.util.SpUtil;
 
 
-@LoonLayout(id = R.layout.activity_main)
+@BGAALayout(R.layout.activity_main)
 public class MainActivity extends BaseActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
-    @LoonView(id = R.id.tb_main_onekey)
+    @BGAAView(R.id.tb_main_onekey)
     private ToggleButton mOnekeyTb;
-    @LoonView(id = R.id.tb_main_shake)
+    @BGAAView(R.id.tb_main_shake)
     private ToggleButton mShakeTb;
-    @LoonView(id = R.id.tb_main_showad)
+    @BGAAView(R.id.tb_main_showad)
     private ToggleButton mShowAdTb;
-    @LoonView(id = R.id.ad_container)
+    @BGAAView(R.id.ad_container)
     private LinearLayout mAdContainer;
 
     private MobiSageAdBanner mAdView;

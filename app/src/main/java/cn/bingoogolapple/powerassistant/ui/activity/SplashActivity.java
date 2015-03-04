@@ -9,17 +9,16 @@ import com.umeng.update.UmengUpdateAgent;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.bingoogolapple.bgabanner.library.BGABanner;
-import cn.bingoogolapple.loon.library.LoonLayout;
-import cn.bingoogolapple.loon.library.LoonView;
+import cn.bingoogolapple.bgaannotation.BGAALayout;
+import cn.bingoogolapple.bgaannotation.BGAAView;
+import cn.bingoogolapple.bgabanner.BGABanner;
 import cn.bingoogolapple.powerassistant.R;
 import cn.bingoogolapple.powerassistant.util.SpUtil;
 
-@LoonLayout(id = R.layout.activity_splash)
+@BGAALayout(R.layout.activity_splash)
 public class SplashActivity extends BaseActivity {
-    @LoonView(id = R.id.banner_splash_pager)
+    @BGAAView(R.id.banner_splash_pager)
     private BGABanner mPagerBanner;
-
 
     @Override
     protected void processLogic(Bundle savedInstanceState) {

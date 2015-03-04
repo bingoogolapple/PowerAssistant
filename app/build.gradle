@@ -1,27 +1,29 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
-    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
+    compileSdkVersion ANDROID_BUILD_SDK_VERSION as int
+    buildToolsVersion ANDROID_BUILD_TOOLS_VERSION
 
     defaultConfig {
-        applicationId "cn.bingoogolapple.powerassistant"
-        minSdkVersion Integer.parseInt(project.ANDROID_BUILD_MIN_SDK_VERSION)
-        targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
-        versionName "1.0.5"
-        versionCode 6
+        minSdkVersion ANDROID_BUILD_MIN_SDK_VERSION as int
+        targetSdkVersion ANDROID_BUILD_TARGET_SDK_VERSION as int
+        versionCode 192
+        versionName "1.9.2"
+        // 项目发布时改为false
+        buildConfigField "boolean", "IS_DEVELOP_MODE", "true"
     }
+
     buildTypes {
         release {
-            runProguard false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
 
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*'])
-    compile 'com.android.support:support-v4:20.+'
-    compile 'cn.bingoogolapple.loon:library:1.1.0@aar'
-    compile 'cn.bingoogolapple.bgabanner:library:1.0.0@aar'
+    compile 'com.android.support:appcompat-v7:21.0.2'
+    compile 'cn.bingoogolapple:bga-annotation:1.0.0@aar'
+    compile 'cn.bingoogolapple:bga-banner:1.0.0@aar'
 }

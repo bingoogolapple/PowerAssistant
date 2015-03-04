@@ -1,14 +1,14 @@
 package cn.bingoogolapple.powerassistant.ui.activity;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 
-import cn.bingoogolapple.loon.library.Loon;
+import cn.bingoogolapple.bgaannotation.BGAA;
 import cn.bingoogolapple.powerassistant.App;
 
-public abstract class BaseActivity extends FragmentActivity implements View.OnClickListener {
+public abstract class BaseActivity extends ActionBarActivity implements View.OnClickListener {
     protected App mApp;
     protected LocalBroadcastManager mLocalBroadcastManager;
 
@@ -24,7 +24,7 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
     }
 
     protected void injectView() {
-        Loon.injectView2Activity(this);
+        BGAA.injectView2Activity(this);
     }
 
     protected void setListener() {
