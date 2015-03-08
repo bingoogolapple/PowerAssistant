@@ -11,9 +11,6 @@ import java.util.LinkedList;
 import cn.bingoogolapple.powerassistant.util.SpUtil;
 import cn.bingoogolapple.powerassistant.util.ToastUtil;
 
-/**
- * Created by bingoogolapple on 14-10-30.
- */
 public class App extends Application {
     private static final String TAG = App.class.getSimpleName();
     private static App sInstance;

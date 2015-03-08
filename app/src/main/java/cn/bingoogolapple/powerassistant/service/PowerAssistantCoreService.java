@@ -27,9 +27,6 @@ import cn.bingoogolapple.powerassistant.receiver.DeviceKeeperReceiver;
 import cn.bingoogolapple.powerassistant.util.Logger;
 import cn.bingoogolapple.powerassistant.util.SpUtil;
 
-/**
- * Created by bingoogolapple on 14-10-30.
- */
 public class PowerAssistantCoreService extends Service {
     private static final String TAG = PowerAssistantCoreService.class.getSimpleName();
     private DevicePolicyManager mDevicePolicyManager;

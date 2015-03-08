@@ -21,7 +21,6 @@ import cn.bingoogolapple.powerassistant.service.PowerAssistantCoreService;
 import cn.bingoogolapple.powerassistant.util.Logger;
 import cn.bingoogolapple.powerassistant.util.SpUtil;
 
-
 @BGAALayout(R.layout.activity_main)
 public class MainActivity extends BaseActivity {
     private static final String TAG = MainActivity.class.getSimpleName();

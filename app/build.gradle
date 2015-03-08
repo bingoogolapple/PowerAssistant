@@ -7,10 +7,10 @@ android {
     defaultConfig {
         minSdkVersion ANDROID_BUILD_MIN_SDK_VERSION as int
         targetSdkVersion ANDROID_BUILD_TARGET_SDK_VERSION as int
-        versionCode 192
-        versionName "1.9.2"
+        versionCode 200
+        versionName "2.0.0"
         // 项目发布时改为false
-        buildConfigField "boolean", "IS_DEVELOP_MODE", "true"
+        buildConfigField "boolean", "IS_DEVELOP_MODE", "false"
     }
 
     buildTypes {

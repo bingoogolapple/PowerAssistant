@@ -2,7 +2,11 @@ package cn.bingoogolapple.powerassistant.util;
 
 import android.util.Log;
 
+import cn.bingoogolapple.powerassistant.BuildConfig;
+
 public class Logger {
+    private static final boolean IS_DEVELOP_MODE = BuildConfig.IS_DEVELOP_MODE;
+    
 	private Logger() {
 	}
 
@@ -15,31 +19,31 @@ public class Logger {
 	private static int VERBOSE = 5;
 
 	public static void v(String tag, String msg) {
-		if (LOGLEVEL > VERBOSE) {
+		if (IS_DEVELOP_MODE && LOGLEVEL > VERBOSE) {
 			Log.v(tag, msg);
 		}
 	}
 
 	public static void d(String tag, String msg) {
-		if (LOGLEVEL > DEBUG) {
+		if (IS_DEVELOP_MODE && LOGLEVEL > DEBUG) {
 			Log.d(tag, msg);
 		}
 	}
 
 	public static void i(String tag, String msg) {
-		if (LOGLEVEL > INFO) {
+		if (IS_DEVELOP_MODE && LOGLEVEL > INFO) {
 			Log.i(tag, msg);
 		}
 	}
 
 	public static void w(String tag, String msg) {
-		if (LOGLEVEL > WARN) {
+		if (IS_DEVELOP_MODE && LOGLEVEL > WARN) {
 			Log.w(tag, msg);
 		}
 	}
 
 	public static void e(String tag, String msg) {
-		if (LOGLEVEL > ERROR) {
+		if (IS_DEVELOP_MODE && LOGLEVEL > ERROR) {
 			Log.e(tag, msg);
 		}
 	}

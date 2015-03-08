@@ -19,6 +19,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="@dimen/size_large_large"
         android:text="进入主界面"
+        android:padding="@dimen/size_small"
         android:background="#33999999"
         android:textColor="@android:color/white"
         android:textSize="@dimen/textSize_middle" />
